@@ -81,6 +81,7 @@ Your driver maps BARs to access device registers.
 ## Prerequisites
 
 - Device model (Part 6)
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - PCI uses pcim_* and devm_* extensively
 - Memory-mapped I/O (Part 5)
 - Interrupt handling (Part 7)
 

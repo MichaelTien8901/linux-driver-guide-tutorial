@@ -160,4 +160,5 @@ All these subsystems share common patterns:
 Before starting this part, you should understand:
 - Platform drivers and Device Tree (Part 8)
 - Basic driver probe/remove lifecycle (Part 6)
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - all examples use device-managed allocation
 - sysfs attributes (Part 6)

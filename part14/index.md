@@ -109,6 +109,7 @@ flowchart TB
 
 - Kernel module basics (Part 1-2)
 - Device model (Part 6) - probe/remove pattern
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - USB drivers use usb_* and devm_* functions
 - Understanding of asynchronous I/O
 
 ## Further Reading

@@ -158,4 +158,5 @@ These subsystems share several design patterns:
 Before starting this part, you should understand:
 - Platform drivers and Device Tree (Part 8)
 - I2C/SPI drivers (Part 9)
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - essential for these drivers
 - Basic kernel memory management (Part 5)

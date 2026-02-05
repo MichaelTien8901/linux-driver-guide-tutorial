@@ -86,6 +86,7 @@ This part includes ONE complete working example:
 
 - Kernel module basics (Part 1-2)
 - Device model and platform drivers (Part 6)
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - for automatic cleanup
 - Interrupt handling concepts (Part 7)
 - DMA basics helpful but not required (Part 5)
 

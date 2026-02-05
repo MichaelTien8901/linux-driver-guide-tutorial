@@ -110,6 +110,9 @@ static int my_remove(struct platform_device *pdev)
 }
 ```
 
+{: .tip }
+> **Learn more about managed resources**: See [Part 6.5: Managed Resources (devres)]({% link part6/05-devres.md %}) for a complete guide to `devm_*` functions and automatic resource cleanup.
+
 ## IRQ Flags
 
 Common flags for `request_irq()`:

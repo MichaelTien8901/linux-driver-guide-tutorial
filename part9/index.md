@@ -186,6 +186,7 @@ This part includes working examples:
 Before starting this part, ensure you understand:
 
 - Platform drivers (Part 6)
+- [Managed resources (devm_*)]({% link part6/05-devres.md %}) - used extensively in these drivers
 - Device Tree (Part 8)
 - Interrupt handling (Part 7)
 
