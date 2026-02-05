@@ -2,6 +2,7 @@
 obj-m := sysfs_demo.o
 KERNEL_DIR ?= /lib/modules/$(shell uname -r)/build
 KDIR ?= $(KERNEL_DIR)
+PWD := $(shell pwd)
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules

@@ -32,7 +32,7 @@ static dev_t dev_num;
 static struct class *simple_class;
 static struct device *simple_device;
 
-static int simple_open(struct inode *inode, struct file *file)
+static int schar_open(struct inode *inode, struct file *file)
 {
 	struct simple_device *dev;
 
@@ -45,13 +45,13 @@ static int simple_open(struct inode *inode, struct file *file)
 	return 0;
 }
 
-static int simple_release(struct inode *inode, struct file *file)
+static int schar_release(struct inode *inode, struct file *file)
 {
 	pr_info("simple_char: device closed\n");
 	return 0;
 }
 
-static ssize_t simple_read(struct file *file, char __user *buf,
+static ssize_t schar_read(struct file *file, char __user *buf,
 			   size_t count, loff_t *ppos)
 {
 	struct simple_device *dev = file->private_data;
@@ -86,7 +86,7 @@ static ssize_t simple_read(struct file *file, char __user *buf,
 	return count;
 }
 
-static ssize_t simple_write(struct file *file, const char __user *buf,
+static ssize_t schar_write(struct file *file, const char __user *buf,
 			    size_t count, loff_t *ppos)
 {
 	struct simple_device *dev = file->private_data;
@@ -159,10 +159,10 @@ static loff_t simple_llseek(struct file *file, loff_t offset, int whence)
 
 static const struct file_operations simple_fops = {
 	.owner   = THIS_MODULE,
-	.open    = simple_open,
-	.release = simple_release,
-	.read    = simple_read,
-	.write   = simple_write,
+	.open    = schar_open,
+	.release = schar_release,
+	.read    = schar_read,
+	.write   = schar_write,
 	.llseek  = simple_llseek,
 };
 

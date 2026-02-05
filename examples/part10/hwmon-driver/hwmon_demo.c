@@ -11,6 +11,7 @@
 #include <linux/hwmon.h>
 #include <linux/hwmon-sysfs.h>
 #include <linux/random.h>
+#include <linux/of.h>
 
 #define DRIVER_NAME     "demo-hwmon"
 #define NUM_TEMP        2

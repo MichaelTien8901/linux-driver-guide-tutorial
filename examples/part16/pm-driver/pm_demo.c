@@ -220,7 +220,7 @@ static void pm_demo_remove(struct platform_device *pdev)
 
 static struct platform_driver pm_demo_driver = {
     .probe = pm_demo_probe,
-    .remove = pm_demo_remove,
+    .remove_new = pm_demo_remove,
     .driver = {
         .name = DRIVER_NAME,
         .pm = &pm_demo_pm_ops,

@@ -7,6 +7,7 @@
  */
 
 #include <linux/module.h>
+#include <linux/of.h>
 #include <linux/i2c.h>
 #include <linux/regmap.h>
 #include <linux/iio/iio.h>
