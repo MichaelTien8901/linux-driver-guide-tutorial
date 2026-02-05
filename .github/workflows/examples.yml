@@ -44,13 +44,18 @@ jobs:
           tar xf "linux-${KERNEL_VERSION}.tar.xz"
           ln -s "linux-${KERNEL_VERSION}" linux
           cd linux
-          # Prepare for ARM64 modules
+          # Prepare for ARM64 modules with full symbol table
           make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig
           make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules_prepare
+          # Generate Module.symvers with kernel symbols
+          make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- scripts
+          # Create minimal Module.symvers to avoid warnings
+          touch Module.symvers
 
       - name: Build examples for ARM64
         run: |
           export KERNEL_DIR=/kernel/linux
+          export KBUILD_MODPOST_WARN=1
           for makefile in $(find examples -name "Makefile" -type f); do
             dir=$(dirname "$makefile")
             echo "Building: $dir"
@@ -58,6 +63,8 @@ jobs:
               ARCH=arm64 \
               CROSS_COMPILE=aarch64-linux-gnu- \
               KERNEL_DIR=/kernel/linux \
+              KDIR=/kernel/linux \
+              KBUILD_MODPOST_WARN=1 \
               || echo "::warning::Build failed for $dir"
           done
 

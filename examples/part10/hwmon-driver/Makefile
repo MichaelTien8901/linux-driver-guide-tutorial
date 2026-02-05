@@ -5,7 +5,8 @@
 
 obj-m := hwmon_demo.o
 
-KDIR ?= /lib/modules/$(shell uname -r)/build
+KERNEL_DIR ?= /lib/modules/$(shell uname -r)/build
+KDIR ?= $(KERNEL_DIR)
 PWD := $(shell pwd)
 
 all:

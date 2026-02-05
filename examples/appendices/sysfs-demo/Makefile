@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 obj-m := sysfs_demo.o
-KDIR ?= /lib/modules/$(shell uname -r)/build
+KERNEL_DIR ?= /lib/modules/$(shell uname -r)/build
+KDIR ?= $(KERNEL_DIR)
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules

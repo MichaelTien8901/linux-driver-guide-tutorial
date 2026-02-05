@@ -4,7 +4,8 @@
 obj-m := platform_driver_demo.o
 
 # Kernel build directory
-KDIR ?= /lib/modules/$(shell uname -r)/build
+KERNEL_DIR ?= /lib/modules/$(shell uname -r)/build
+KDIR ?= $(KERNEL_DIR)
 
 # Current directory
 PWD := $(shell pwd)
