@@ -3,7 +3,7 @@ title: Linux Driver Development Guide
 description: >-
   A comprehensive guide for embedded Linux driver development - from kernel modules
   to advanced subsystem drivers. Covers modern kernel 6.x APIs with practical examples.
-baseurl: "/linux-driver-dev-guide"
+baseurl: "/linux-driver-guide-tutorial"
 url: ""
 
 # Theme
@@ -15,7 +15,7 @@ mermaid:
   version: "10.6.0"
 
 # Logo and favicon
-logo: "/assets/images/linux_driver_logo.svg"
+logo: "/assets/images/linux_driver_logo.png"
 
 # Search
 search_enabled: true
