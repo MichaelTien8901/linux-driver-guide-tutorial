@@ -428,7 +428,7 @@ static struct i2c_driver demo_sensor_driver = {
         .pm = pm_sleep_ptr(&demo_sensor_pm_ops),
     },
     .probe = demo_sensor_probe,
-    .remove_new = demo_sensor_remove,
+    .remove = demo_sensor_remove,
     .id_table = demo_sensor_id,
 };
 module_i2c_driver(demo_sensor_driver);
