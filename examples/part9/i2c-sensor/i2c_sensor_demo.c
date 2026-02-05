@@ -384,7 +384,7 @@ static int demo_sensor_suspend(struct device *dev)
 
     /* Disable sensor */
     regmap_write(sensor->regmap, REG_CONFIG, 0);
-    regmap_cache_mark_dirty(sensor->regmap);
+    regcache_mark_dirty(sensor->regmap);
 
     return 0;
 }
@@ -396,7 +396,7 @@ static int demo_sensor_resume(struct device *dev)
     struct demo_sensor *sensor = iio_priv(indio_dev);
 
     /* Restore configuration from cache */
-    regmap_cache_sync(sensor->regmap);
+    regcache_sync(sensor->regmap);
 
     /* Re-enable sensor */
     regmap_write(sensor->regmap, REG_CONFIG,
