@@ -1,0 +1,66 @@
+# Kernel Module Makefile Template
+# Copy this file to your module directory and rename to "Makefile"
+# Then update MODULE_NAME and optionally MODULE_SOURCES
+#
+# Usage:
+#   make                          # Build for current kernel
+#   make KERNEL_DIR=/path/to/kernel  # Build against specific kernel
+#   make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  # Cross-compile
+
+# Module name (without .ko extension)
+MODULE_NAME := mymodule
+
+# Source files (if more than one, list them here)
+# For single file: leave empty, will use $(MODULE_NAME).c
+MODULE_SOURCES :=
+
+# Object files for the module
+ifneq ($(MODULE_SOURCES),)
+  $(MODULE_NAME)-objs := $(MODULE_SOURCES:.c=.o)
+  obj-m := $(MODULE_NAME).o
+else
+  obj-m := $(MODULE_NAME).o
+endif
+
+# Kernel build directory
+KERNEL_DIR ?= /lib/modules/$(shell uname -r)/build
+
+# Current directory
+PWD := $(shell pwd)
+
+# Default target
+all: modules
+
+# Build modules
+modules:
+	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) modules
+
+# Clean build artifacts
+clean:
+	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) clean
+	rm -f *.o *.ko *.mod.c *.mod *.order *.symvers
+
+# Install module (requires root)
+install:
+	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) modules_install
+
+# Help
+help:
+	@echo "Kernel Module Build System"
+	@echo ""
+	@echo "Targets:"
+	@echo "  all      - Build the module (default)"
+	@echo "  clean    - Remove build artifacts"
+	@echo "  install  - Install module to system"
+	@echo "  help     - Show this help"
+	@echo ""
+	@echo "Variables:"
+	@echo "  KERNEL_DIR    - Path to kernel build directory"
+	@echo "  ARCH          - Target architecture (arm64, arm, x86)"
+	@echo "  CROSS_COMPILE - Cross-compiler prefix"
+	@echo ""
+	@echo "Examples:"
+	@echo "  make"
+	@echo "  make KERNEL_DIR=/kernel/linux ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-"
+
+.PHONY: all modules clean install help

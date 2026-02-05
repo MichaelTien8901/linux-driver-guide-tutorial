@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  kernel-dev:
+    build: .
+    volumes:
+      - .:/workspace
+      - kernel-sources:/kernel
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    # Privileged mode for loading kernel modules in QEMU
+    privileged: true
+    environment:
+      - ARCH=arm64
+      - CROSS_COMPILE=aarch64-linux-gnu-
+
+volumes:
+  kernel-sources:

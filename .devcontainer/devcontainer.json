@@ -1,0 +1,21 @@
+{
+  "name": "Linux Driver Development",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "kernel-dev",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.makefile-tools",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Linux Driver Development environment ready!'",
+  "remoteUser": "root"
+}

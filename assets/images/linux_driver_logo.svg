@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Gradient for the gear -->
+    <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gradient for penguin -->
+    <linearGradient id="penguinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="56" fill="#0f172a" stroke="#1e3a5f" stroke-width="2"/>
+
+  <!-- Outer gear teeth -->
+  <g fill="url(#gearGrad)">
+    <!-- Top -->
+    <rect x="52" y="8" width="16" height="12" rx="2"/>
+    <!-- Top-right -->
+    <rect x="82" y="22" width="12" height="16" rx="2" transform="rotate(45 88 30)"/>
+    <!-- Right -->
+    <rect x="100" y="52" width="12" height="16" rx="2"/>
+    <!-- Bottom-right -->
+    <rect x="82" y="82" width="12" height="16" rx="2" transform="rotate(-45 88 90)"/>
+    <!-- Bottom -->
+    <rect x="52" y="100" width="16" height="12" rx="2"/>
+    <!-- Bottom-left -->
+    <rect x="26" y="82" width="12" height="16" rx="2" transform="rotate(45 32 90)"/>
+    <!-- Left -->
+    <rect x="8" y="52" width="12" height="16" rx="2"/>
+    <!-- Top-left -->
+    <rect x="26" y="22" width="12" height="16" rx="2" transform="rotate(-45 32 30)"/>
+  </g>
+
+  <!-- Gear body (ring) -->
+  <circle cx="60" cy="60" r="38" fill="none" stroke="url(#gearGrad)" stroke-width="8"/>
+
+  <!-- Inner circle (dark) -->
+  <circle cx="60" cy="60" r="30" fill="#0f172a"/>
+
+  <!-- Simplified Tux penguin -->
+  <g transform="translate(60, 60)">
+    <!-- Body -->
+    <ellipse cx="0" cy="8" rx="18" ry="22" fill="url(#penguinGrad)"/>
+
+    <!-- Belly (white) -->
+    <ellipse cx="0" cy="10" rx="11" ry="16" fill="#f8fafc"/>
+
+    <!-- Head -->
+    <circle cx="0" cy="-14" r="14" fill="url(#penguinGrad)"/>
+
+    <!-- Eyes -->
+    <ellipse cx="-5" cy="-16" rx="3" ry="4" fill="#f8fafc"/>
+    <ellipse cx="5" cy="-16" rx="3" ry="4" fill="#f8fafc"/>
+    <circle cx="-4" cy="-16" r="1.5" fill="#1f2937"/>
+    <circle cx="6" cy="-16" r="1.5" fill="#1f2937"/>
+
+    <!-- Beak -->
+    <path d="M-4,-10 L0,-6 L4,-10 Z" fill="#f59e0b"/>
+
+    <!-- Feet -->
+    <ellipse cx="-8" cy="28" rx="6" ry="3" fill="#f59e0b"/>
+    <ellipse cx="8" cy="28" rx="6" ry="3" fill="#f59e0b"/>
+  </g>
+
+  <!-- Circuit traces (decorative) -->
+  <g stroke="#4a9eff" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M20,60 L8,60"/>
+    <path d="M100,60 L112,60"/>
+    <path d="M60,20 L60,8"/>
+    <path d="M60,100 L60,112"/>
+    <circle cx="8" cy="60" r="2" fill="#4a9eff"/>
+    <circle cx="112" cy="60" r="2" fill="#4a9eff"/>
+    <circle cx="60" cy="8" r="2" fill="#4a9eff"/>
+    <circle cx="60" cy="112" r="2" fill="#4a9eff"/>
+  </g>
+</svg>

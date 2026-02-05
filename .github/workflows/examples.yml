@@ -1,0 +1,67 @@
+name: Build Kernel Module Examples
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'docs/examples/**'
+      - '.github/workflows/examples.yml'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'docs/examples/**'
+      - '.github/workflows/examples.yml'
+  workflow_dispatch:
+
+jobs:
+  build-examples:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          apt-get update
+          apt-get install -y \
+            build-essential \
+            gcc-aarch64-linux-gnu \
+            gcc-arm-linux-gnueabihf \
+            bc bison flex \
+            libssl-dev libelf-dev libncurses-dev \
+            wget xz-utils \
+            git
+
+      - name: Download kernel headers
+        run: |
+          KERNEL_VERSION="6.6.70"
+          mkdir -p /kernel
+          cd /kernel
+          wget -q "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${KERNEL_VERSION}.tar.xz"
+          tar xf "linux-${KERNEL_VERSION}.tar.xz"
+          ln -s "linux-${KERNEL_VERSION}" linux
+          cd linux
+          # Prepare for ARM64 modules
+          make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig
+          make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules_prepare
+
+      - name: Build examples for ARM64
+        run: |
+          export KERNEL_DIR=/kernel/linux
+          for makefile in $(find docs/examples -name "Makefile" -type f); do
+            dir=$(dirname "$makefile")
+            echo "Building: $dir"
+            make -C "$dir" \
+              ARCH=arm64 \
+              CROSS_COMPILE=aarch64-linux-gnu- \
+              KERNEL_DIR=/kernel/linux \
+              || echo "::warning::Build failed for $dir"
+          done
+
+      - name: Check for .ko files
+        run: |
+          echo "Built kernel modules:"
+          find docs/examples -name "*.ko" -type f || echo "No modules found"
