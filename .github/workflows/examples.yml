@@ -4,12 +4,12 @@ on:
   push:
     branches: [main, master]
     paths:
-      - 'docs/examples/**'
+      - 'examples/**'
       - '.github/workflows/examples.yml'
   pull_request:
     branches: [main, master]
     paths:
-      - 'docs/examples/**'
+      - 'examples/**'
       - '.github/workflows/examples.yml'
   workflow_dispatch:
 
@@ -51,7 +51,7 @@ jobs:
       - name: Build examples for ARM64
         run: |
           export KERNEL_DIR=/kernel/linux
-          for makefile in $(find docs/examples -name "Makefile" -type f); do
+          for makefile in $(find examples -name "Makefile" -type f); do
             dir=$(dirname "$makefile")
             echo "Building: $dir"
             make -C "$dir" \
@@ -64,4 +64,4 @@ jobs:
       - name: Check for .ko files
         run: |
           echo "Built kernel modules:"
-          find docs/examples -name "*.ko" -type f || echo "No modules found"
+          find examples -name "*.ko" -type f || echo "No modules found"
