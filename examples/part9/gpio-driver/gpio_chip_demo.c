@@ -403,7 +403,7 @@ MODULE_DEVICE_TABLE(of, demo_gpio_of_match);
 
 static struct platform_driver demo_gpio_driver = {
     .probe = demo_gpio_probe,
-    .remove = demo_gpio_remove,
+    .remove_new = demo_gpio_remove,
     .driver = {
         .name = DRIVER_NAME,
         .of_match_table = demo_gpio_of_match,

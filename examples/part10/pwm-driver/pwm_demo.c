@@ -204,7 +204,7 @@ MODULE_DEVICE_TABLE(of, demo_pwm_of_match);
 
 static struct platform_driver demo_pwm_driver = {
     .probe = demo_pwm_probe,
-    .remove = demo_pwm_remove,
+    .remove_new = demo_pwm_remove,
     .driver = {
         .name = DRIVER_NAME,
         .of_match_table = demo_pwm_of_match,

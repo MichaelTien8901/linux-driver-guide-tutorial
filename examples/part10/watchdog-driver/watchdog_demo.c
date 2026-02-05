@@ -228,7 +228,7 @@ MODULE_DEVICE_TABLE(of, demo_wdt_of_match);
 
 static struct platform_driver demo_wdt_driver = {
     .probe = demo_wdt_probe,
-    .remove = demo_wdt_remove,
+    .remove_new = demo_wdt_remove,
     .driver = {
         .name = DRIVER_NAME,
         .of_match_table = demo_wdt_of_match,

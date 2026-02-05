@@ -168,7 +168,7 @@ MODULE_DEVICE_TABLE(of, demo_leds_of_match);
 
 static struct platform_driver demo_leds_driver = {
     .probe = demo_leds_probe,
-    .remove = demo_leds_remove,
+    .remove_new = demo_leds_remove,
     .driver = {
         .name = DRIVER_NAME,
         .of_match_table = demo_leds_of_match,

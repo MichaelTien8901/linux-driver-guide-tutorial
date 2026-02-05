@@ -223,7 +223,7 @@ MODULE_DEVICE_TABLE(of, demo_rtc_of_match);
 
 static struct platform_driver demo_rtc_driver = {
     .probe = demo_rtc_probe,
-    .remove = demo_rtc_remove,
+    .remove_new = demo_rtc_remove,
     .driver = {
         .name = DRIVER_NAME,
         .of_match_table = demo_rtc_of_match,
