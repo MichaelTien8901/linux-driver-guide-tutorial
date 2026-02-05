@@ -1,0 +1,32 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundle
+.bundle/
+vendor/
+Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Kernel module build artifacts (for examples)
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+.*.cmd
+modules.order
+Module.symvers
+.tmp_versions/
+
+# Logs
+*.log
