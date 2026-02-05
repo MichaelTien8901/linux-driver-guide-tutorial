@@ -2,7 +2,7 @@
 layout: default
 title: "1.3 Kernel Sources"
 parent: "Part 1: Getting Started"
-nav_order: 3
+nav_order: 4
 ---
 
 # Obtaining and Configuring Kernel Sources

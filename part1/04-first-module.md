@@ -2,7 +2,7 @@
 layout: default
 title: "1.4 First Module"
 parent: "Part 1: Getting Started"
-nav_order: 4
+nav_order: 5
 ---
 
 # Your First Kernel Module

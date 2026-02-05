@@ -2,7 +2,7 @@
 layout: default
 title: "1.5 QEMU Testing"
 parent: "Part 1: Getting Started"
-nav_order: 5
+nav_order: 6
 ---
 
 # Testing with QEMU

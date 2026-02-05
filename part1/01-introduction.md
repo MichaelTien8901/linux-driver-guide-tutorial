@@ -2,7 +2,7 @@
 layout: default
 title: "1.1 Introduction"
 parent: "Part 1: Getting Started"
-nav_order: 1
+nav_order: 2
 ---
 
 # Introduction to Linux Driver Development

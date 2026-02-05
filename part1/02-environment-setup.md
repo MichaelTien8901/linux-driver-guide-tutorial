@@ -2,7 +2,7 @@
 layout: default
 title: "1.2 Environment Setup"
 parent: "Part 1: Getting Started"
-nav_order: 2
+nav_order: 3
 ---
 
 # Environment Setup
