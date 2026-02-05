@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 120" width="580" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" width="620" height="120">
   <defs>
     <!-- Gradient for the gear -->
     <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -82,10 +82,7 @@
   </g>
 
   <!-- Title text on right -->
-  <text x="140" y="55" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" fill="#4a9eff">
-    Linux Driver Guide
-  </text>
-  <text x="140" y="110" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" fill="#4a9eff">
-    Tutorial
+  <text x="140" y="75" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" fill="#4a9eff">
+    Linux Driver Tutorial
   </text>
 </svg>
