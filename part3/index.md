@@ -35,8 +35,8 @@ flowchart LR
     FO --> CD
     CD --> HW
 
-    style Application fill:#e8f5e9,stroke:#4caf50
-    style Driver fill:#fff3e0,stroke:#ff9800
+    style Application fill:#7a8f73,stroke:#2e7d32
+    style Driver fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Chapter Contents
@@ -117,9 +117,9 @@ flowchart TB
     FO --> Write
     FO --> Ioctl
 
-    style UserSpace fill:#e8f5e9,stroke:#4caf50
-    style KernelSpace fill:#ffebee,stroke:#f44336
-    style YourDriver fill:#fff3e0,stroke:#ff9800
+    style UserSpace fill:#7a8f73,stroke:#2e7d32
+    style KernelSpace fill:#8f6d72,stroke:#c62828
+    style YourDriver fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Further Reading

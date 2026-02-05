@@ -285,8 +285,8 @@ flowchart LR
     Edge --> EN["One IRQ per edge"]
     Level --> LN["Continuous until cleared"]
 
-    style E1 fill:#73828d,stroke:#1976d2
-    style L1 fill:#8f8370,stroke:#f57c00
+    style E1 fill:#738f99,stroke:#0277bd
+    style L1 fill:#8f8a73,stroke:#f9a825
 ```
 
 ### Edge Triggered

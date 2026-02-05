@@ -20,8 +20,8 @@ flowchart TD
     Sleep -->|"Yes<br/>(process context)"| Kernel["GFP_KERNEL"]
     Sleep -->|"No<br/>(interrupt, holding spinlock)"| Atomic["GFP_ATOMIC"]
 
-    style Kernel fill:#486649,stroke:#4caf50
-    style Atomic fill:#8f8330,stroke:#ff9800
+    style Kernel fill:#7a8f73,stroke:#2e7d32
+    style Atomic fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Common GFP Flags

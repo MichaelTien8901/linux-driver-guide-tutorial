@@ -30,9 +30,9 @@ flowchart TB
         mmap["mmap()<br/>User space mapping"]
     end
 
-    style Allocators fill:#63828d,stroke:#2196f3
-    style DMA fill:#8f8360,stroke:#ff9800
-    style MMIO fill:#837585,stroke:#9c27b0
+    style Allocators fill:#738f99,stroke:#0277bd
+    style DMA fill:#8f8a73,stroke:#f9a825
+    style MMIO fill:#8f7392,stroke:#6a1b9a
 ```
 
 ## Chapter Contents
@@ -68,9 +68,9 @@ flowchart TD
     Sleep -->|No| Atomic["GFP_ATOMIC"]
     Sleep -->|Yes| Kernel["GFP_KERNEL"]
 
-    style Slab fill:#586659,stroke:#4caf50
-    style Small fill:#63727d,stroke:#2196f3
-    style Large fill:#9f7360,stroke:#ff9800
+    style Slab fill:#7a8f73,stroke:#2e7d32
+    style Small fill:#738f99,stroke:#0277bd
+    style Large fill:#8f8a73,stroke:#f9a825
 ```
 
 | Allocator | Size Range | Contiguous | Can Sleep | Use Case |

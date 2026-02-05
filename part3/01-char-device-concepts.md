@@ -126,7 +126,7 @@ flowchart LR
     DevNode --> VFS["VFS"]
     VFS -->|"major lookup"| Driver["Your Driver"]
 
-    style DevNode fill:#8f8370,stroke:#ff9800
+    style DevNode fill:#8f8a73,stroke:#f9a825
 ```
 
 ### Creating Device Nodes

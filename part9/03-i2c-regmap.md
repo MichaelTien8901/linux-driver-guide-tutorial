@@ -35,8 +35,8 @@ flowchart TB
         RM --> MMIO2
     end
 
-    style Without fill:#8f6d72,stroke:#333
-    style With fill:#687869,stroke:#333
+    style Without fill:#8f6d72,stroke:#c62828
+    style With fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Basic Setup

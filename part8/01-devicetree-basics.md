@@ -33,7 +33,7 @@ flowchart LR
     end
 
     style Before fill:#8f6d72,stroke:#c62828
-    style After fill:#788679,stroke:#2e7d32
+    style After fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## File Types

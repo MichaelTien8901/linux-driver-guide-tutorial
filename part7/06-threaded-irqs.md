@@ -27,8 +27,8 @@ flowchart TB
         TH2 --> TT2
     end
 
-    style Traditional fill:#ffcdd2,stroke:#c62828
-    style Threaded fill:#c8e6c9,stroke:#2e7d32
+    style Traditional fill:#8f6d72,stroke:#c62828
+    style Threaded fill:#7a8f73,stroke:#2e7d32
 ```
 
 ### Benefits

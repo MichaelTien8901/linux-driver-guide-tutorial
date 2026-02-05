@@ -34,8 +34,8 @@ flowchart LR
     IOCmd --> Handler
     Handler --> Action
 
-    style UserSpace fill:#e8f5e9,stroke:#4caf50
-    style KernelSpace fill:#ffebee,stroke:#f44336
+    style UserSpace fill:#7a8f73,stroke:#2e7d32
+    style KernelSpace fill:#8f6d72,stroke:#c62828
 ```
 
 ## Defining IOCTL Commands

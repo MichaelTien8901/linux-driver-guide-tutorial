@@ -32,7 +32,7 @@ flowchart TD
     IRQ --> E3
     Held --> E4
 
-    style Detects fill:#AA8d82,stroke:#f44336
+    style Detects fill:#8f6d72,stroke:#c62828
 ```
 
 ## Enabling Lockdep

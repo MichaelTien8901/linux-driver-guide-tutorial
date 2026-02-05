@@ -118,8 +118,9 @@ flowchart TD
     Success --> Remove
     Remove --> Auto2
 
-    style Auto1 fill:#c8e6c9,stroke:#4caf50
-    style Auto2 fill:#c8e6c9,stroke:#4caf50
+    style Auto1 fill:#7a8f73,stroke:#2e7d32
+    style Auto2 fill:#7a8f73,stroke:#2e7d32
+    style Error fill:#8f6d72,stroke:#c62828
 ```
 
 Resources are freed in **reverse order** of allocation.

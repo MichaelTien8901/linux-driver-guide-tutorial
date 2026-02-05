@@ -30,7 +30,7 @@ flowchart LR
         CPU1b --> PC1
     end
 
-    style PerCPU fill:#688669,stroke:#4caf50
+    style PerCPU fill:#7a8f73,stroke:#2e7d32
 ```
 
 Benefits:

@@ -32,7 +32,7 @@ flowchart LR
     P --> DC75
 
     style Signal fill:#738f99,stroke:#0277bd
-    style Formula fill:#5f7a82,stroke:#01579b
+    style Formula fill:#738f99,stroke:#0277bd
 ```
 
 - **Period**: Time for one complete cycle (high + low)

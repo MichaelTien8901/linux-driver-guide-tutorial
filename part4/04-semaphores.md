@@ -340,9 +340,9 @@ flowchart TD
     Exclusive -->|No (multiple readers)| RWSem["Use RW Semaphore"]
     Sleep -->|No| Spin["Use Spinlock"]
 
-    style Mutex fill:#e3f2fd,stroke:#2196f3
-    style Sem fill:#f3e5f5,stroke:#9c27b0
-    style RWSem fill:#e8f5e9,stroke:#4caf50
+    style Mutex fill:#738f99,stroke:#0277bd
+    style Sem fill:#8f7392,stroke:#6a1b9a
+    style RWSem fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Summary

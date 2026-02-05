@@ -30,9 +30,9 @@ flowchart LR
     Base --> MERGED
     Overlay --> MERGED
 
-    style Base fill:#73828d,stroke:#1976d2
-    style Overlay fill:#8f8370,stroke:#f57c00
-    style Result fill:#687669,stroke:#2e7d32
+    style Base fill:#738f99,stroke:#0277bd
+    style Overlay fill:#8f8a73,stroke:#f9a825
+    style Result fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Overlay Syntax

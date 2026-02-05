@@ -39,8 +39,8 @@ flowchart TD
     Sources --> Problem
     Problem --> Solutions
 
-    style Problem fill:#CC8d72,stroke:#f44336
-    style Solutions fill:#487679,stroke:#4caf50
+    style Problem fill:#8f6d72,stroke:#c62828
+    style Solutions fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Chapter Contents
@@ -77,10 +77,10 @@ flowchart TD
     Sleep -->|"Yes"| Counter
     Counter -->|"Yes"| Atomic["atomic_t"]
 
-    style Spin fill:#6f6337, stroke:#ff9800
-    style Mutex fill:#5382fd,stroke:#2196f3
-    style RCU fill:#f35585,stroke:#9c27b0
-    style Atomic fill:#588589,stroke:#4caf50
+    style Spin fill:#8f8a73,stroke:#f9a825
+    style Mutex fill:#738f99,stroke:#0277bd
+    style RCU fill:#8f7392,stroke:#6a1b9a
+    style Atomic fill:#7a8f73,stroke:#2e7d32
 ```
 
 | Primitive | Sleep OK? | Interrupt Safe? | Best For |

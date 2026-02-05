@@ -34,7 +34,7 @@ flowchart LR
         B1["misc_register()"]
     end
 
-    style Misc fill:#c8e6c9,stroke:#4caf50
+    style Misc fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Basic Misc Device

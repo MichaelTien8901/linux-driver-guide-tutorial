@@ -28,7 +28,7 @@ flowchart LR
     Code --> VA
     VA --> Reg
 
-    style VA fill:#9f9380,stroke:#ff9800
+    style VA fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Basic ioremap Usage

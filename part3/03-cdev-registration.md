@@ -35,7 +35,7 @@ flowchart TD
     D --> E["device_create()"]
     E --> F["Device Ready<br/>/dev/mydevice"]
 
-    style F fill:#c8e6c9,stroke:#4caf50
+    style F fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Step 1: Allocate Device Numbers

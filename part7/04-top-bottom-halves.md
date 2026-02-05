@@ -34,9 +34,9 @@ flowchart TB
     TOP --> OIRQ
     OIRQ --> BOT
 
-    style LONG fill:#c62828,stroke:#c62828
-    style TOP fill:#2e7d32,stroke:#2e7d32
-    style BOT fill:#1565c0,stroke:#1565c0
+    style LONG fill:#8f6d72,stroke:#c62828
+    style TOP fill:#7a8f73,stroke:#2e7d32
+    style BOT fill:#738f99,stroke:#0277bd
 ```
 
 ## Top Half (Hardirq)
@@ -92,10 +92,10 @@ flowchart TB
     WQ -->|"Can sleep"| R2[Complex processing]
     TI -->|"Can sleep"| R3[Preferred for drivers]
 
-    style TH fill:#c62828,stroke:#c62828
-    style TL fill:#f9a825,stroke:#f9a825
-    style WQ fill:#2e7d32,stroke:#2e7d32
-    style TI fill:#1565c0,stroke:#1565c0
+    style TH fill:#8f6d72,stroke:#c62828
+    style TL fill:#8f8a73,stroke:#f9a825
+    style WQ fill:#7a8f73,stroke:#2e7d32
+    style TI fill:#738f99,stroke:#0277bd
 ```
 
 ### Comparison
@@ -319,9 +319,9 @@ flowchart TB
     Q2 -->|Yes| WQ
     Q2 -->|No| TI
 
-    style TL fill:#f9a825,stroke:#f9a825
-    style WQ fill:#2e7d32,stroke:#2e7d32
-    style TI fill:#1565c0,stroke:#1565c0
+    style TL fill:#8f8a73,stroke:#f9a825
+    style WQ fill:#7a8f73,stroke:#2e7d32
+    style TI fill:#738f99,stroke:#0277bd
 ```
 
 ### Guidelines

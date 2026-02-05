@@ -45,9 +45,9 @@ flowchart TB
     CPU --> SPI
     CPU --> GPIO
 
-    style I2C fill:#73828d,stroke:#1976d2
-    style SPI fill:#8f8370,stroke:#f57c00
-    style GPIO fill:#687869,stroke:#388e3c
+    style I2C fill:#738f99,stroke:#0277bd
+    style SPI fill:#8f8a73,stroke:#f9a825
+    style GPIO fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Chapter Contents

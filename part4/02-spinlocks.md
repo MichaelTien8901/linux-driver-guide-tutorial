@@ -99,9 +99,9 @@ flowchart TD
     Known -->|Yes| IRQ["spin_lock_irq()"]
     Known -->|No| IRQSave
 
-    style IRQSave fill:#fff3e0,stroke:#ff9800
-    style BH fill:#e3f2fd,stroke:#2196f3
-    style Basic fill:#e8f5e9,stroke:#4caf50
+    style IRQSave fill:#8f8a73,stroke:#f9a825
+    style BH fill:#738f99,stroke:#0277bd
+    style Basic fill:#7a8f73,stroke:#2e7d32
 ```
 
 | Data Access | Function |

@@ -32,7 +32,7 @@ flowchart LR
     DevRead --> Buf
     DevWrite --> Buf
 
-    style Buf fill:#688669,stroke:#4caf50
+    style Buf fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Allocating Coherent DMA Memory

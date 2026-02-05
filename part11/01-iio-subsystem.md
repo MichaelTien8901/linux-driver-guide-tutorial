@@ -40,7 +40,7 @@ flowchart TB
     IIOCORE --> EVENTS
 
     style Before fill:#8f6d72,stroke:#c62828
-    style After fill:#687869,stroke:#388e3c
+    style After fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## IIO Architecture

@@ -39,9 +39,9 @@ flowchart TB
     D2 --> Dr1
     D3 --> Dr2
 
-    style Buses fill:#73828d,stroke:#2196f3
-    style Devices fill:#8f8370,stroke:#ff9800
-    style Drivers fill:#B37585,stroke:#9c27b0
+    style Buses fill:#738f99,stroke:#0277bd
+    style Devices fill:#8f8a73,stroke:#f9a825
+    style Drivers fill:#8f7392,stroke:#6a1b9a
 ```
 
 ## Chapter Contents
@@ -70,9 +70,9 @@ flowchart LR
     Bus -->|"has"| Driver
     Device <-->|"match & bind"| Driver
 
-    style Bus fill:#63424d,stroke:#2196f3
-    style Device fill:#8f8370,stroke:#ff9800
-    style Driver fill:#8375b5,stroke:#9c27b0
+    style Bus fill:#738f99,stroke:#0277bd
+    style Device fill:#8f8a73,stroke:#f9a825
+    style Driver fill:#8f7392,stroke:#6a1b9a
 ```
 
 1. **Bus**: Defines how devices are discovered and how drivers are matched

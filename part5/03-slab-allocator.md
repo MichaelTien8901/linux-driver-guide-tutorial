@@ -27,7 +27,7 @@ flowchart LR
         B4["Allocate"] --> Cache
     end
 
-    style With fill:#887689,stroke:#4caf50
+    style With fill:#7a8f73,stroke:#2e7d32
 ```
 
 Benefits:

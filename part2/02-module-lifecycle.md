@@ -28,8 +28,8 @@ flowchart TD
     E -->|"return 0"| F["Module loaded<br/>✓ Success"]
     E -->|"return != 0"| G["Module unloaded<br/>(cleanup if partial)"]
 
-    style F fill:#c8e6c9,stroke:#4caf50
-    style G fill:#ffcdd2,stroke:#f44336
+    style F fill:#7a8f73,stroke:#2e7d32
+    style G fill:#8f6d72,stroke:#c62828
 ```
 
 ## Init and Exit Functions

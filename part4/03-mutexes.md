@@ -52,8 +52,8 @@ flowchart TD
     Need --> InIRQ
     InIRQ -->|Yes| Spin
 
-    style Mutex fill:#2322fd,stroke:#2196f3
-    style Spin fill:#4f44e0,stroke:#ff9800
+    style Mutex fill:#738f99,stroke:#0277bd
+    style Spin fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Mutex Operations

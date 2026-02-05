@@ -35,8 +35,8 @@ flowchart TB
     H1 --> H2
     H2 --> H3
 
-    style D2 fill:#2e7d32,stroke:#2e7d32
-    style H2 fill:#2e7d32,stroke:#2e7d32
+    style D2 fill:#7a8f73,stroke:#2e7d32
+    style H2 fill:#7a8f73,stroke:#2e7d32
 ```
 
 ### Common Scenarios

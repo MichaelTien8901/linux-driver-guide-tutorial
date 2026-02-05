@@ -27,7 +27,7 @@ flowchart TB
     Driver -->|"remap_pfn_range()"| VA
     VA -->|"Direct access"| Buf
 
-    style VA fill:#688669,stroke:#4caf50
+    style VA fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Implementing mmap

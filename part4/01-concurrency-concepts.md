@@ -216,8 +216,8 @@ flowchart LR
     A -->|wants| B
     B -->|wants| A
 
-    style A fill:#ffcdd2,stroke:#f44336
-    style B fill:#ffcdd2,stroke:#f44336
+    style A fill:#8f6d72,stroke:#c62828
+    style B fill:#8f6d72,stroke:#c62828
 ```
 
 ### Data Corruption

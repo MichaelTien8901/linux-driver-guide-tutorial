@@ -38,9 +38,9 @@ flowchart TB
     DRV --> IMM
     DRV -->|"Schedule"| DEF
 
-    style Hardware fill:#73828d,stroke:#2196f3
-    style Kernel fill:#8f8370,stroke:#ff9800
-    style Response fill:#B37585,stroke:#9c27b0
+    style Hardware fill:#738f99,stroke:#0277bd
+    style Kernel fill:#8f8a73,stroke:#f9a825
+    style Response fill:#8f7392,stroke:#6a1b9a
 ```
 
 ## Chapter Contents
@@ -115,11 +115,11 @@ flowchart TB
     TH -->|"Kernel thread"| Note3["Preferred for drivers"]
     ST -->|"Direct softirq"| Note4["Reserved for core kernel"]
 
-    style IRQ fill:#c62828,stroke:#c62828
-    style TL fill:#f9a825,stroke:#f9a825
-    style WQ fill:#2e7d32,stroke:#2e7d32
-    style TH fill:#1565c0,stroke:#1565c0
-    style ST fill:#6a1b9a,stroke:#6a1b9a
+    style IRQ fill:#8f6d72,stroke:#c62828
+    style TL fill:#8f8a73,stroke:#f9a825
+    style WQ fill:#7a8f73,stroke:#2e7d32
+    style TH fill:#738f99,stroke:#0277bd
+    style ST fill:#8f7392,stroke:#6a1b9a
 ```
 
 ## Interrupt Handler Rules

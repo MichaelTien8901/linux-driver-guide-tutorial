@@ -25,7 +25,7 @@ flowchart LR
         S3["Lower setup cost"]
     end
 
-    style Streaming fill:#9f9380,stroke:#ff9800
+    style Streaming fill:#8f8a73,stroke:#f9a825
 ```
 
 | Use Case | Recommended |

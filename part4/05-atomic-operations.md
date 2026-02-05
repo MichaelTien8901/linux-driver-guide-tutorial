@@ -360,8 +360,8 @@ flowchart LR
         L6["Enable preemption"]
     end
 
-    style Atomic fill:#c8e6c9,stroke:#4caf50
-    style Lock fill:#fff3e0,stroke:#ff9800
+    style Atomic fill:#7a8f73,stroke:#2e7d32
+    style Lock fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Summary

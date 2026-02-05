@@ -109,10 +109,10 @@ flowchart LR
         CLKPROV["Clock Provider"]
     end
 
-    style IIO_Sub fill:#5f7a82,stroke:#0277bd
-    style RTC_Sub fill:#5f8259,stroke:#2e7d32
-    style REG_Sub fill:#827f5f,stroke:#f9a825
-    style CLK_Sub fill:#826563,stroke:#c62828
+    style IIO_Sub fill:#738f99,stroke:#0277bd
+    style RTC_Sub fill:#7a8f73,stroke:#2e7d32
+    style REG_Sub fill:#8f8a73,stroke:#f9a825
+    style CLK_Sub fill:#8f6d72,stroke:#c62828
 ```
 
 ## Key Structures

@@ -31,7 +31,7 @@ flowchart LR
     DTS --> DTB --> SAME
 
     style Old fill:#8f6d72,stroke:#c62828
-    style New fill:#486649,stroke:#2e7d32
+    style New fill:#7a8f73,stroke:#2e7d32
 ```
 
 ## Chapter Contents

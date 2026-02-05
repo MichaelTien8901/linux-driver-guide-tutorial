@@ -114,10 +114,10 @@ flowchart LR
         LEDCDEV --> TRIGGER
     end
 
-    style PWM_Sub fill:#5f7a82,stroke:#0277bd
-    style WDT_Sub fill:#826563,stroke:#c62828
-    style HWMON_Sub fill:#5f8259,stroke:#2e7d32
-    style LED_Sub fill:#827f5f,stroke:#f9a825
+    style PWM_Sub fill:#738f99,stroke:#0277bd
+    style WDT_Sub fill:#8f6d72,stroke:#c62828
+    style HWMON_Sub fill:#7a8f73,stroke:#2e7d32
+    style LED_Sub fill:#8f8a73,stroke:#f9a825
 ```
 
 ## Key Structures
