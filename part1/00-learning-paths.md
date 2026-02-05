@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Learning Paths"
-nav_order: 2
+parent: "Part 1: Getting Started"
+nav_order: 0
 ---
 
 # Learning Paths
