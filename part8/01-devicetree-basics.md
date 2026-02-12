@@ -454,6 +454,66 @@ hexdump /sys/firmware/devicetree/base/soc/uart@10000000/reg
 dtc -I fs /sys/firmware/devicetree/base/
 ```
 
+## Exercise: Decompile and Inspect a DTB
+
+This exercise walks through decompiling a device tree blob to understand a real board's hardware description.
+
+### Step 1: Find a DTB
+
+```bash
+# On a running system:
+ls /sys/firmware/fdt 2>/dev/null         # Raw FDT blob
+
+# Or in the kernel build tree:
+ls arch/arm64/boot/dts/*/*.dtb
+
+# In QEMU, dump the live tree:
+dtc -I fs -O dts /sys/firmware/devicetree/base/ > live.dts
+```
+
+### Step 2: Decompile to Human-Readable DTS
+
+```bash
+# From a .dtb file
+dtc -I dtb -O dts -o decompiled.dts board.dtb
+
+# From the live system filesystem
+dtc -I fs -O dts -o live.dts /sys/firmware/devicetree/base/
+```
+
+### Step 3: Inspect Key Nodes
+
+```bash
+# Find all compatible strings (shows what drivers match)
+grep "compatible" decompiled.dts
+
+# Find all interrupt mappings
+grep -A 2 "interrupts" decompiled.dts
+
+# Find memory layout
+grep -A 3 "memory@" decompiled.dts
+
+# Find all devices with status = "okay"
+grep -B 5 'status = "okay"' decompiled.dts
+```
+
+### Step 4: Compare with an Overlay
+
+```bash
+# Compile an overlay
+dtc -I dts -O dtb -@ -o overlay.dtbo overlay.dts
+
+# Apply overlay to base DTB
+fdtoverlay -i base.dtb -o merged.dtb overlay.dtbo
+
+# Decompile merged result to verify
+dtc -I dtb -O dts -o merged.dts merged.dtb
+diff decompiled.dts merged.dts
+```
+
+{: .warning }
+Decompiled DTS loses comments and may reorder nodes. It won't match the original source exactly, but all data is preserved.
+
 ## Summary
 
 - Device Tree separates hardware description from driver code

@@ -180,6 +180,76 @@ If developing for your host system (not cross-compiling):
 make KERNEL_DIR=/lib/modules/$(uname -r)/build
 ```
 
+## Adding a Driver to the Kernel Source Tree
+
+All examples in this guide build out-of-tree (external modules). But production drivers live inside the kernel source tree. Here's how to add one.
+
+### Step 1: Create Your Driver Directory
+
+```bash
+cd /kernel/linux/drivers/misc
+mkdir my_driver
+```
+
+### Step 2: Add Source and Kconfig
+
+Create `drivers/misc/my_driver/my_driver.c` (your driver code) and a Kconfig entry:
+
+```bash
+# drivers/misc/my_driver/Kconfig
+config MY_DRIVER
+    tristate "My example driver"
+    help
+      This is an example in-tree driver.
+      Say M to build as a loadable module.
+```
+
+### Step 3: Add Makefile
+
+```makefile
+# drivers/misc/my_driver/Makefile
+obj-$(CONFIG_MY_DRIVER) += my_driver.o
+```
+
+`obj-$(CONFIG_MY_DRIVER)` means: build as module when `CONFIG_MY_DRIVER=m`, build-in when `=y`, skip when `=n`.
+
+### Step 4: Hook into Parent Kconfig and Makefile
+
+```bash
+# Append to drivers/misc/Kconfig (before the final "endmenu" if present)
+echo 'source "drivers/misc/my_driver/Kconfig"' >> drivers/misc/Kconfig
+
+# Append to drivers/misc/Makefile
+echo 'obj-$(CONFIG_MY_DRIVER) += my_driver/' >> drivers/misc/Makefile
+```
+
+### Step 5: Configure and Build
+
+```bash
+# Enable via menuconfig (Device Drivers → Misc → My example driver → M)
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+
+# Or enable directly in .config
+echo "CONFIG_MY_DRIVER=m" >> .config
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- olddefconfig
+
+# Build just your module
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- M=drivers/misc/my_driver
+```
+
+### Out-of-Tree vs In-Tree
+
+| Aspect | Out-of-Tree | In-Tree |
+|--------|------------|---------|
+| Build | Separate Makefile with `M=` | Integrated with kernel build |
+| Config | Always built | Controlled by Kconfig (`y`/`m`/`n`) |
+| Distribution | Separate `.ko` file | Included in kernel packages |
+| Upstream | Not possible | Required for mainline |
+| Dependencies | Manual | Kconfig handles automatically |
+
+{: .tip }
+Develop out-of-tree for fast iteration, then move in-tree when preparing for upstream submission. See [Appendix F: Upstreaming]({% link appendices/upstreaming/index.md %}) for the full submission process.
+
 ## Troubleshooting
 
 ### "No rule to make target 'modules'"
