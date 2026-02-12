@@ -56,6 +56,9 @@ flowchart TD
 | [4.7]({% link part4/07-completions.md %}) | Completions | Signaling between threads |
 | [4.8]({% link part4/08-workqueues.md %}) | Work Queues | Deferred processing |
 | [4.9]({% link part4/09-lockdep.md %}) | Lockdep | Deadlock detection |
+| [4.10]({% link part4/10-timers.md %}) | Kernel Timers | timer_list, hrtimer |
+| [4.11]({% link part4/11-wait-queues.md %}) | Wait Queues | wait_event, wake_up |
+| [4.12]({% link part4/12-kthreads.md %}) | Kernel Threads | kthread_run, kthread_stop |
 
 ## Quick Reference: Choosing a Lock
 
@@ -98,6 +101,8 @@ This part includes working examples:
 
 - **spinlock-demo**: Spinlock usage patterns
 - **workqueue-demo**: Deferred work processing
+- **timer-demo**: Kernel timer and hrtimer usage
+- **kthread-demo**: Background kernel threads
 
 ## Common Pitfalls
 
@@ -123,6 +128,8 @@ Before starting this part, ensure you understand:
 - [Locking Documentation](https://docs.kernel.org/locking/index.html) - Kernel locking guide
 - [RCU Documentation](https://docs.kernel.org/RCU/index.html) - RCU concepts and API
 - [Workqueue Documentation](https://docs.kernel.org/core-api/workqueue.html) - Work queue API
+- [Timer Documentation](https://docs.kernel.org/timers/index.html) - Kernel timers
+- [Kthread Documentation](https://docs.kernel.org/driver-api/basics.html#kernel-threads) - Kernel threads
 
 ## Next
 

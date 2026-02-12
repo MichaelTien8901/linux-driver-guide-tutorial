@@ -459,4 +459,4 @@ static int my_gpio_set_config(struct gpio_chip *gc, unsigned int offset,
 
 ## Next
 
-Continue to [Part 10: PWM, Watchdog, HWMON, LED Drivers]({% link part10/index.md %}) to learn about more device subsystems.
+Learn about the [pin control subsystem]({% link part9/08-pinctrl.md %}) which manages pin muxing and electrical configuration.

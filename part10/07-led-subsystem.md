@@ -500,4 +500,4 @@ echo "0 255 0" > /sys/class/leds/rgb-led/multi_intensity  # Green
 
 ## Next
 
-Continue to [Part 11: IIO, RTC, Regulator, Clock Drivers]({% link part11/index.md %}) to learn about more device subsystems.
+Learn about the [input subsystem]({% link part10/08-input-subsystem.md %}) for buttons, keyboards, and touchscreens.

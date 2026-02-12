@@ -61,6 +61,7 @@ flowchart TB
 | [9.5]({% link part9/05-spi-driver.md %}) | SPI Driver | spi_driver, SPI messaging |
 | [9.6]({% link part9/06-gpio-consumer.md %}) | GPIO Consumer API | gpiod_get, set/get values |
 | [9.7]({% link part9/07-gpio-provider.md %}) | GPIO Provider | gpio_chip implementation |
+| [9.8]({% link part9/08-pinctrl.md %}) | Pin Control | Pin muxing, pin configuration |
 
 ## I2C vs SPI Comparison
 

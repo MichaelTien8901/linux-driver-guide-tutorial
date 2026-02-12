@@ -359,6 +359,32 @@ if (is_valid == true)
         ...
 ```
 
+## Static Analysis with Sparse
+
+Sparse is a semantic checker for C that understands kernel address-space annotations:
+
+```bash
+# Check your module with Sparse
+make C=1 modules
+
+# Check the whole kernel build
+make C=2 allmodconfig
+```
+
+### Key Annotations
+
+| Annotation | Purpose |
+|------------|---------|
+| `__user` | Pointer to user space memory |
+| `__iomem` | Pointer to I/O mapped memory |
+| `__kernel` | Pointer to kernel space memory |
+| `__bitwise` | Type-restricted bitwise integer |
+| `__force` | Override address space check (use sparingly) |
+
+Sparse detects dangerous pointer confusions — for example, passing a `__user` pointer where a kernel pointer is expected, which would bypass `copy_from_user()` safety.
+
+See [Sparse Documentation](https://www.kernel.org/doc/html/latest/dev-tools/sparse.html) for details.
+
 ## Summary
 
 Key style rules:
@@ -368,11 +394,13 @@ Key style rules:
 - Spaces around operators and keywords
 - lowercase_with_underscores for names
 - Use checkpatch.pl before submitting
+- Use Sparse (`make C=1`) to catch address-space bugs
 
 ## Resources
 
 - [Kernel Coding Style](https://www.kernel.org/doc/html/latest/process/coding-style.html)
 - `scripts/checkpatch.pl` in kernel source
+- [Sparse](https://www.kernel.org/doc/html/latest/dev-tools/sparse.html) - Static analysis tool
 
 ## Next
 

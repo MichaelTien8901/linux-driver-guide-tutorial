@@ -363,4 +363,4 @@ spin_lock_init(&lock);
 
 ## Next Steps
 
-You've completed Part 2! Continue to [Part 3: Character Device Drivers]({% link part3/index.md %}) to build your first real driver.
+Continue to [kernel data structures]({% link part2/07-data-structures.md %}) for an in-depth look at linked lists, hash tables, and trees.

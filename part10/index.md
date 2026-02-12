@@ -128,6 +128,7 @@ flowchart LR
 | Watchdog | `struct watchdog_device` | `watchdog_register_device()` |
 | HWMON | `struct hwmon_chip_info` | `hwmon_device_register_with_info()` |
 | LED | `struct led_classdev` | `led_classdev_register()` |
+| Input | `struct input_dev` | `input_register_device()` |
 
 ## Common Patterns
 
@@ -147,6 +148,7 @@ All these subsystems share common patterns:
 5. [HWMON Subsystem]({% link part10/05-hwmon-subsystem.md %}) - Hardware monitoring overview
 6. [HWMON Driver]({% link part10/06-hwmon-driver.md %}) - Implementing HWMON sensors
 7. [LED Subsystem]({% link part10/07-led-subsystem.md %}) - LED class drivers
+8. [Input Subsystem]({% link part10/08-input-subsystem.md %}) - Input device framework
 
 ## Further Reading
 
@@ -154,6 +156,7 @@ All these subsystems share common patterns:
 - [Watchdog API](https://docs.kernel.org/watchdog/index.html) - Watchdog drivers
 - [HWMON Documentation](https://docs.kernel.org/hwmon/index.html) - Hardware monitoring
 - [LED Class Documentation](https://docs.kernel.org/leds/index.html) - LED framework
+- [Input Documentation](https://docs.kernel.org/input/index.html) - Input subsystem
 
 ## Prerequisites
 

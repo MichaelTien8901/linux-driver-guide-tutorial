@@ -371,4 +371,4 @@ void process_ctx_fixed(void) {
 
 ## Next
 
-Continue to [Part 5: Memory Management]({% link part5/index.md %}) to learn about kernel memory allocation.
+Learn about [kernel timers]({% link part4/10-timers.md %}) for time-delayed execution.

@@ -32,6 +32,7 @@ Complete [Part 1: Getting Started]({% link part1/index.md %}) or have a working 
 | [2.4]({% link part2/04-data-types.md %}) | Data Types | Fixed-width types, endianness handling |
 | [2.5]({% link part2/05-error-handling.md %}) | Error Handling | ERR_PTR, goto cleanup, return conventions |
 | [2.6]({% link part2/06-kernel-api.md %}) | Kernel API | Common macros and helper functions |
+| [2.7]({% link part2/07-data-structures.md %}) | Data Structures | Linked lists, hash tables, red-black trees |
 
 ## Key Concepts
 
@@ -62,6 +63,7 @@ This part includes two example modules:
 
 - `examples/part2/module-params/` - Module parameters demonstration
 - `examples/part2/export-symbol/` - Symbol exporting between modules
+- `examples/part2/data-structures/` - Linked list and hash table operations
 
 ## Further Reading
 
