@@ -100,6 +100,7 @@ flowchart TB
 | [WinUSB and libusb]({% link part14/08-winusb-libusb.md %}) | Cross-platform compatibility, usbfs |
 | [USB Class Drivers]({% link part14/09-usb-class-drivers.md %}) | ACM, mass storage, network (NCM/RNDIS), MCTP |
 | [USB Gadget Drivers]({% link part14/10-usb-gadget.md %}) | Device-side drivers, ConfigFS, FunctionFS |
+| [Dynamic Gadget Configuration]({% link part14/11-dynamic-gadget.md %}) | Runtime mode switching from kernel code |
 
 ## Example
 

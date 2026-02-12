@@ -73,6 +73,7 @@ Your driver maps BARs to access device registers.
 | [Driver Skeleton]({% link part15/02-driver-skeleton.md %}) | pci_driver structure and resource mapping |
 | [MSI/MSI-X Interrupts]({% link part15/03-msi-interrupts.md %}) | Multiple vectors, interrupt affinity |
 | [DMA Operations]({% link part15/04-dma-operations.md %}) | Coherent and streaming DMA mappings |
+| [PCIe Security]({% link part15/05-pcie-security.md %}) | Attestation, link encryption (DOE, CMA, IDE, TDISP) |
 
 ## Example
 
